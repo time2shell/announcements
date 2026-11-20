@@ -1,0 +1,29 @@
+name: Announce an upcoming shell
+description: Put a countdown on time2shell for a named bug you are about to disclose.
+title: "Announce: "
+labels: [announce]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Teaser only: name, date, team and (optionally) the product. Nothing that helps anyone find the bug before the fix.
+        Faster: fill the form at time2shell (Announce) and paste the JSON it generates below.
+  - type: input
+    id: name
+    attributes: { label: Name, placeholder: Foo2Shell }
+    validations: { required: true }
+  - type: input
+    id: when
+    attributes: { label: Planned disclosure (UTC), placeholder: "2026-12-02 15:00" }
+    validations: { required: true }
+  - type: textarea
+    id: team
+    attributes: { label: "Team (one per line: Name — Org)" }
+    validations: { required: true }
+  - type: input
+    id: teaser
+    attributes: { label: Public teaser link, description: Where you announced it (blog, X, Mastodon…), placeholder: "https://" }
+    validations: { required: true }
+  - type: textarea
+    id: json
+    attributes: { label: JSON from the Announce form (optional), render: json }

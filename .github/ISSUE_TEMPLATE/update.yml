@@ -1,0 +1,16 @@
+name: Add or fix a shell
+description: A named *2Shell / *4Shell vulnerability is missing, or an entry is wrong or out of date.
+labels: [data]
+body:
+  - type: input
+    id: shell
+    attributes: { label: Name or CVE, placeholder: "Foo2Shell / CVE-2026-12345" }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What should change, description: Credits, first public source, write-ups, PoC, patch… }
+    validations: { required: true }
+  - type: textarea
+    id: sources
+    attributes: { label: Sources, description: Links that back every change. We only list what a public source says. }
+    validations: { required: true }
