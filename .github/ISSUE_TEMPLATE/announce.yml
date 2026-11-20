@@ -10,7 +10,7 @@ body:
         Faster: fill the form at time2shell (Announce) and paste the JSON it generates below.
   - type: input
     id: name
-    attributes: { label: Name, placeholder: Foo2Shell }
+    attributes: { label: Title, placeholder: Public vulnerability title }
     validations: { required: true }
   - type: input
     id: when
